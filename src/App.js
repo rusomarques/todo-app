@@ -1,8 +1,13 @@
 import React from 'react';
-import './App.css';
+import { TodoManager } from './TodoManager/TodoManager';
+import './App.scss';
 
 function App() {
-  return <div className="App">TODO APP</div>;
+  return (
+    <div className="App">
+      <TodoManager />
+    </div>
+  );
 }
 
 export default App;
