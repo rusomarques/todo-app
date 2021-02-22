@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+  "globals": {
+    "React": "writable",
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["prettier", "react", "jest", "react-hooks"],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "eqeqeq": "error",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "warn",
+    "jest/consistent-test-it": "off",
+    "jest/no-hooks": "off",
+    "jest/prefer-expect-assertions": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true
+      }
+    ],
+    "no-use-before-define": "error",
+    "prefer-spread": "off",
+    "prettier/prettier": ["error", {"endOfLine": "auto"}],
+    "react/prop-types": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-children-prop": "off",
+    "react/require-default-props": "warn",
+    "react/jsx-filename-extension": 0, // Allow usage of .js extension for React components
+    "react/no-array-index-key": 0, // Allow usage of index as part of the iterator key
+    "react/jsx-fragments": 0, // Allow usage of both <> and <Fragment>
+    "react/jsx-props-no-spreading": 0, // Allow spreading for SINGLE conditional params,
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+  }
+}
+
