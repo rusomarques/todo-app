@@ -16,10 +16,15 @@ export const todoSlice = createSlice({
     editTodo: (state, action) => {
       const updatedTodoIndex = state.todos.findIndex(todo => todo.id === action.payload.id);
       state.todos[updatedTodoIndex].task = action.payload.task;
+    },
+    toggleIsDone: (state, action) => {
+      const updatedTodoIndex = state.todos.findIndex(todo => todo.id === action.payload);
+      const isDone = state.todos[updatedTodoIndex].done;
+      state.todos[updatedTodoIndex].done = !isDone;
     }
   }
 });
 
-export const { addTodo, removeTodo, editTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, editTodo, toggleIsDone } = todoSlice.actions;
 
 export default todoSlice.reducer;
