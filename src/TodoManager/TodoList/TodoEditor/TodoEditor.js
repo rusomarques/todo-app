@@ -22,7 +22,13 @@ export const TodoEditor = ({ todoData, setIsEditing }) => {
 
   return (
     <form className={styles['form-edit-todo']} onSubmit={onConfirmEdition}>
-      <input ref={inputRef} aria-label="Edit todo" value={updatedTask} onChange={e => setUpdatedTask(e.target.value)} />
+      <input
+        ref={inputRef}
+        aria-label="Edit todo"
+        value={updatedTask}
+        onChange={e => setUpdatedTask(e.target.value)}
+        onBlur={onConfirmEdition}
+      />
     </form>
   );
 };
