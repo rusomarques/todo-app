@@ -1,6 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
+/* eslint-disable */
+import { createStore } from 'redux';
 import todoReducer from './reducer';
 
-export default configureStore({
-  reducer: todoReducer
-});
+const store = createStore(
+  todoReducer /* preloadedState, */,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store;
