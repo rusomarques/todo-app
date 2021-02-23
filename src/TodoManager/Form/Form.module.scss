@@ -35,8 +35,12 @@
     border-radius: 0.4rem;
     color: $color-grey-dark;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: $color-primary-dark;
+    }
+
+    &:disabled {
+      cursor: default;
     }
   }
 }
