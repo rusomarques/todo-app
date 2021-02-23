@@ -1,10 +1,12 @@
 /* eslint no-param-reassign: 0 */
 import { createSlice } from '@reduxjs/toolkit';
+import { TODOS_STORAGE_KEY } from '../constants';
+import { getFromLocalStorage } from '../utils/getFromLocalStorage';
 
 export const todoSlice = createSlice({
   name: 'todo',
   initialState: {
-    todos: []
+    todos: getFromLocalStorage(TODOS_STORAGE_KEY, [])
   },
   reducers: {
     addTodo: (state, action) => {

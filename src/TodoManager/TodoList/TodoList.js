@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { TODOS_STORAGE_KEY } from '../../common/constants';
 import { TodoItem } from './TodoItem/TodoItem';
 import styles from './TodoList.module.scss';
 
 export const TodoList = () => {
   const todos = useSelector(state => state.todos);
+
+  useEffect(() => {
+    window.localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <ul className={styles['todo-list']}>
