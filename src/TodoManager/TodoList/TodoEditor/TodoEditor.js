@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 /* eslint-disable-next-line */
 import PropTypes from 'prop-types';
-// import { editTodo } from '../../../common/store/todoSlice';
-const editTodo = () => {};
+import { useDispatch } from '../../../common/hooks/useDispatch';
+import { editTodo } from '../../../common/store/actions';
 
 export const TodoEditor = ({ todoData, setIsEditing }) => {
-  const dispatch = () => {};
+  const dispatch = useDispatch();
   const [updatedTask, setUpdatedTask] = useState(todoData.task);
 
   const onConfirmEdition = e => {

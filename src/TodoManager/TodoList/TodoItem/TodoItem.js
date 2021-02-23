@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 /* eslint-disable-next-line */
 import PropTypes from 'prop-types';
-// import { removeTodo, toggleIsDone } from '../../../common/store/todoSlice';
 import { TodoEditor } from '../TodoEditor/TodoEditor';
+import { useDispatch } from '../../../common/hooks/useDispatch';
+import { removeTodo, toggleIsDone } from '../../../common/store/actions';
 import styles from './TodoItem.module.scss';
 
-const removeTodo = () => {};
-const toggleIsDone = () => {};
-
 export const TodoItem = ({ id, task, done }) => {
-  const dispatch = () => {};
+  const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState(false);
 
   const deleteHandler = () => dispatch(removeTodo(id));

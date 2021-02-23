@@ -1,7 +1,8 @@
-import { getFromLocalStorage } from '../utils/getFromLocalStorage';
+// import { getFromLocalStorage } from '../utils/getFromLocalStorage';
 import { ACTION_TYPES } from './actionTypes';
 
-const initialState = getFromLocalStorage([]);
+// const initialState = getFromLocalStorage([]);
+const initialState = [];
 
 const editTodo = (state, action) =>
   state.reduce(
