@@ -1,8 +1,8 @@
-// import { getFromLocalStorage } from '../utils/getFromLocalStorage';
+import { TODOS_STORAGE_KEY } from '../constants';
+import { getFromLocalStorage } from '../utils/getFromLocalStorage';
 import { ACTION_TYPES } from './actionTypes';
 
-// const initialState = getFromLocalStorage([]);
-const initialState = [];
+const initialState = getFromLocalStorage(TODOS_STORAGE_KEY, []);
 
 const editTodo = (state, action) =>
   state.reduce(
