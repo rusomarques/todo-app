@@ -24,7 +24,7 @@ export const TodoItem = ({ id, task, done }) => {
         <TodoEditor todoData={{ id, task }} setIsEditing={setIsEditing} />
       )}
 
-      <div className="todo-item-actions">
+      <div className={styles['todo-actions']}>
         {!isEditing && (
           <button type="button" onClick={onEdit}>
             Edit

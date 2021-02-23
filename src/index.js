@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import './common/scss/style.scss';
 import App from './App';
 import store from './common/store';
 import Provider from './common/components/Provider';
