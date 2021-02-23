@@ -10,5 +10,7 @@
     font-size: $default-font-size;
     color: $color-grey-dark-3;
     width: 90%;
+    display: flex;
+    align-items: center;
   }
 }

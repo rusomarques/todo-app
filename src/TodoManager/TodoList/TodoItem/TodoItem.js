@@ -21,7 +21,9 @@ export const TodoItem = ({ id, task, done }) => {
       <input type="checkbox" checked={done} onChange={isDoneToggler} />
 
       {!isEditing ? (
-        <p className={done ? styles['todo-done'] : 'todo-pending'}>{task}</p>
+        <button type="button" onClick={onEdit} className={styles['btn-task']}>
+          <p className={done ? styles['todo-done'] : 'todo-pending'}>{task}</p>
+        </button>
       ) : (
         <TodoEditor todoData={{ id, task }} setIsEditing={setIsEditing} />
       )}

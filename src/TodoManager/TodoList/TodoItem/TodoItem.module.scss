@@ -13,15 +13,23 @@
     border-bottom: 0;
   }
 
-  & p {
+  & .btn-task {
     margin-left: $spacing-xs;
     max-width: 50rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    &:hover {
+      cursor: text;
+    }
+    & p {
+      font-size: 1.6rem;
+      color: $color-grey-dark;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
-    &.todo-done {
-      text-decoration: line-through;
+      &.todo-done {
+        text-decoration: line-through;
+      }
     }
   }
 
