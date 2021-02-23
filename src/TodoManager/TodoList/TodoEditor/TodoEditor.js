@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 /* eslint-disable-next-line */
 import PropTypes from 'prop-types';
-import { editTodo } from '../../../common/store/todoSlice';
+// import { editTodo } from '../../../common/store/todoSlice';
+const editTodo = () => {};
 
 export const TodoEditor = ({ todoData, setIsEditing }) => {
   const dispatch = () => {};
