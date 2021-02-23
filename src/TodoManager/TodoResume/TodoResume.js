@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 export function TodoResume() {
-  const todos = useSelector(state => state.todos);
+  // const todos = useSelector(state => state.todos);
+  const todos = [];
   const numberOfTodos = todos.length;
   const isPendingTodos = numberOfTodos > 0;
   const headerMessage = isPendingTodos

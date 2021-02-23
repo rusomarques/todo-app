@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 /* eslint-disable-next-line */
 import PropTypes from 'prop-types';
 import { editTodo } from '../../../common/store/todoSlice';
 
 export const TodoEditor = ({ todoData, setIsEditing }) => {
-  const dispatch = useDispatch();
+  const dispatch = () => {};
   const [updatedTask, setUpdatedTask] = useState(todoData.task);
 
   const onConfirmEdition = e => {

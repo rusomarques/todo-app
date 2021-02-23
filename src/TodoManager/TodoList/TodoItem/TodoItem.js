@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 /* eslint-disable-next-line */
 import PropTypes from 'prop-types';
 import { removeTodo, toggleIsDone } from '../../../common/store/todoSlice';
@@ -7,7 +6,7 @@ import { TodoEditor } from '../TodoEditor/TodoEditor';
 import styles from './TodoItem.module.scss';
 
 export const TodoItem = ({ id, task, done }) => {
-  const dispatch = useDispatch();
+  const dispatch = () => {};
   const [isEditing, setIsEditing] = useState(false);
 
   const deleteHandler = () => dispatch(removeTodo(id));

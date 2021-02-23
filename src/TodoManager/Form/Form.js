@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addTodo } from '../../common/store/todoSlice';
 
 export const Form = () => {
-  const dispatch = useDispatch();
+  const dispatch = () => {};
   const [newTodo, setNewTodo] = useState('');
 
   const addTodoHandler = e => {
