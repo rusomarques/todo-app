@@ -1,0 +1,14 @@
+@import '../../../common/scss/abstracts/variables';
+
+.form-edit-todo {
+  margin-left: $spacing-xs;
+  flex-grow: 1;
+
+  & input {
+    border: none;
+    outline: none;
+    font-size: $default-font-size;
+    color: $color-grey-dark-3;
+    width: 90%;
+  }
+}
