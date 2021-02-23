@@ -1,3 +1,6 @@
+@import '../../common/scss/abstracts/variables';
+
 .todo-list {
+  padding-top: $spacing-xxs;
   width: 100%;
 }

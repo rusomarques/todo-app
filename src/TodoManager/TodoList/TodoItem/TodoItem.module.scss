@@ -27,5 +27,19 @@
 
   & .todo-actions {
     margin-left: auto;
+
+    & .btn-edit {
+      margin-right: $spacing-xxs;
+      color: $color-secondary;
+    }
+
+    & .btn-delete {
+      width: 2rem;
+      color: $color-grey-dark-3;
+    }
+    & svg:hover {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
   }
 }

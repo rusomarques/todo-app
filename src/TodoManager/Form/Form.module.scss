@@ -14,6 +14,10 @@
     font-size: $default-font-size;
     color: $color-grey-dark;
 
+    &::placeholder {
+      color: $color-grey-light-2;
+    }
+
     &:hover,
     &:focus,
     &:active {
@@ -22,7 +26,7 @@
     }
   }
 
-  .form-button {
+  .form-btn {
     width: 8rem;
     margin-left: 1rem;
     background: $color-primary;

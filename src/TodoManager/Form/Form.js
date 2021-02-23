@@ -21,8 +21,9 @@ export const Form = () => {
         aria-label="New todo"
         value={newTodo}
         onChange={e => setNewTodo(e.target.value)}
+        placeholder="Enter task"
       />
-      <button className={styles['form-button']} type="submit" onClick={addTodoHandler} disabled={!newTodo}>
+      <button className={styles['form-btn']} type="submit" onClick={addTodoHandler} disabled={!newTodo}>
         Submit
       </button>
     </form>
