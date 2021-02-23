@@ -5,9 +5,7 @@ import { TodoItem } from './TodoItem/TodoItem';
 import styles from './TodoList.module.scss';
 
 export const TodoList = () => {
-  // const todos = useSelector(state => state.todos);
   const todos = useSelector();
-  console.log(todos);
 
   // useEffect(() => {
   //   window.localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
