@@ -12,7 +12,7 @@ const editTodo = (state, action) =>
   );
 
 const toggleIsDone = (state, action) =>
-  state.map(todo => (todo.id === action.payload.id ? { ...todo, done: !todo.done } : todo));
+  state.map(todo => (todo.id === action.payload ? { ...todo, done: !todo.done } : todo));
 
 /** ************* REDUCER ************************* */
 const reducer = (state = initialState, action) => {
