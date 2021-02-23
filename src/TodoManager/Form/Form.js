@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addTodo } from '../../common/store/todoSlice';
 
 export const Form = () => {
@@ -8,7 +9,7 @@ export const Form = () => {
 
   const addTodoHandler = e => {
     e.preventDefault();
-    dispatch(addTodo({ id: 1, task: newTodo, done: false }));
+    dispatch(addTodo({ id: uuidv4(), task: newTodo, done: false }));
     setNewTodo('');
   };
 
