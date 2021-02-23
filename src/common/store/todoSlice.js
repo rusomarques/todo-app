@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint no-param-reassign: 0 */
 import { createSlice } from '@reduxjs/toolkit';
 
 export const todoSlice = createSlice({
@@ -9,10 +9,13 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action) => {
       state.todos = [...state.todos, action.payload];
+    },
+    removeTodo: (state, action) => {
+      state.todos = state.todos.filter(todo => todo.id !== action.payload);
     }
   }
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, removeTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;
