@@ -3,7 +3,8 @@ import { useSelector } from '../../common/hooks/useSelector';
 import styles from './TodoResume.module.scss';
 
 export function TodoResume() {
-  const todos = useSelector();
+  const totalTodos = useSelector();
+  const todos = totalTodos.filter(todo => !todo.done);
   const numberOfTodos = todos.length;
   const isPendingTodos = numberOfTodos > 0;
   const pendingTodosMessage = `${numberOfTodos} Todo${numberOfTodos > 1 ? 's' : ''}`;
