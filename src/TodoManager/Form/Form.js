@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-// import { addTodo } from '../../common/store/todoSlice';
-const addTodo = () => {};
+import { useDispatch } from '../../common/hooks/useDispatch';
+import { addTodo } from '../../common/store/actions';
 
 export const Form = () => {
-  const dispatch = () => {};
+  const dispatch = useDispatch();
   const [newTodo, setNewTodo] = useState('');
 
   const addTodoHandler = e => {
