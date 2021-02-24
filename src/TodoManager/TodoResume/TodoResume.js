@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from '../../common/hooks/useSelector';
 import styles from './TodoResume.module.scss';
 
-export function TodoResume() {
+export const TodoResume = () => {
   const totalTodos = useSelector();
   const todos = totalTodos.filter(todo => !todo.done);
   const numberOfTodos = todos.length;
@@ -20,4 +20,4 @@ export function TodoResume() {
       )}
     </header>
   );
-}
+};

@@ -1,15 +1,11 @@
 import { TODOS_STORAGE_KEY } from '../constants';
-import { getFromLocalStorage } from '../utils/getFromLocalStorage';
+import { getFromLocalStorage } from '../utils/localStorage';
 import { ACTION_TYPES } from './actionTypes';
 
 const initialState = getFromLocalStorage(TODOS_STORAGE_KEY, []);
 
 const editTodo = (state, action) =>
-  state.reduce(
-    (todos, todo) =>
-      todo.id === action.payload.id ? [...todos, { ...todo, task: action.payload.task }] : [...todos, todo],
-    []
-  );
+  state.map(todo => (todo.id === action.payload.id ? { ...todo, task: action.payload.task } : todo));
 
 const toggleIsDone = (state, action) =>
   state.map(todo => (todo.id === action.payload ? { ...todo, done: !todo.done } : todo));
