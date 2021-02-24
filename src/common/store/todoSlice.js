@@ -1,7 +1,7 @@
 /* eslint no-param-reassign: 0 */
 import { createSlice } from '@reduxjs/toolkit';
 import { TODOS_STORAGE_KEY } from '../constants';
-import { getFromLocalStorage } from '../utils/getFromLocalStorage';
+import { getFromLocalStorage } from '../utils/localStorage';
 
 export const todoSlice = createSlice({
   name: 'todo',
