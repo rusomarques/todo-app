@@ -1,5 +1,5 @@
 import { TODOS_STORAGE_KEY } from '../constants';
-import { getFromLocalStorage } from '../utils/getFromLocalStorage';
+import { getFromLocalStorage } from '../utils/localStorage';
 import { ACTION_TYPES } from './actionTypes';
 
 const initialState = getFromLocalStorage(TODOS_STORAGE_KEY, []);

@@ -10,3 +10,7 @@ export const getFromLocalStorage = (key, defaultValue) => {
 
   return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
 };
+
+export const setToLocalStorage = (key, value) => {
+  window.localStorage.setItem(key, JSON.stringify(value));
+};
