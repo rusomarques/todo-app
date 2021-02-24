@@ -10,19 +10,18 @@ export const todoSlice = createSlice({
   },
   reducers: {
     addTodo: (state, action) => {
-      state.todos = [...state.todos, action.payload];
+      state.todos.push(action.payload);
     },
     removeTodo: (state, action) => {
       state.todos = state.todos.filter(todo => todo.id !== action.payload);
     },
     editTodo: (state, action) => {
-      const updatedTodoIndex = state.todos.findIndex(todo => todo.id === action.payload.id);
-      state.todos[updatedTodoIndex].task = action.payload.task;
+      const todoToEdit = state.todos.find(todo => todo.id === action.payload.id);
+      if (todoToEdit) todoToEdit.task = action.payload.task;
     },
     toggleIsDone: (state, action) => {
-      const updatedTodoIndex = state.todos.findIndex(todo => todo.id === action.payload);
-      const isDone = state.todos[updatedTodoIndex].done;
-      state.todos[updatedTodoIndex].done = !isDone;
+      const updatedTodo = state.todos.find(todo => todo.id === action.payload);
+      if (updatedTodo) updatedTodo.done = !updatedTodo.done;
     }
   }
 });
