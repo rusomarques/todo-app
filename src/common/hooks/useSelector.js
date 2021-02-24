@@ -4,7 +4,7 @@ import { AppContext } from '../components/Provider';
 const forcedReducer = state => !state;
 const useForceUpdate = () => useReducer(forcedReducer, false)[1];
 
-export const useSelector = () => {
+export const useSelector = (selector = state => state) => {
   const store = useContext(AppContext);
   const stateRef = useRef(store.getState());
   const forceUpdate = useForceUpdate();
@@ -19,5 +19,5 @@ export const useSelector = () => {
     return unsubscribe;
   }, [forceUpdate, store]);
 
-  return stateRef.current;
+  return selector(stateRef.current);
 };
