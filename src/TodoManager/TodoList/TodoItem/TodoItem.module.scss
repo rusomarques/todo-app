@@ -1,0 +1,53 @@
+@import '../../../common/scss/abstracts/variables';
+
+.todo-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: $spacing-m;
+  padding: 0 $spacing-xs;
+  font-size: 1.6rem;
+  border-bottom: $border-base;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  & .btn-task {
+    margin-left: $spacing-xs;
+    max-width: 50rem;
+    &:hover {
+      cursor: text;
+    }
+    & p {
+      font-size: 1.6rem;
+      color: $color-grey-dark;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &.todo-done {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  & .todo-actions {
+    margin-left: auto;
+
+    & .btn-edit {
+      margin: 0 $spacing-xxs;
+      color: $color-secondary;
+    }
+
+    & .btn-delete {
+      width: 2rem;
+      color: $color-grey-dark-3;
+    }
+    & svg:hover {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

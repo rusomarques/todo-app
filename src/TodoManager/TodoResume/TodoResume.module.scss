@@ -1,0 +1,11 @@
+.todo-resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8rem;
+  box-shadow: 0 0.125em 0.25em rgba(10, 10, 10, 0.1);
+
+  & h2 {
+    font-size: 2rem;
+  }
+}
