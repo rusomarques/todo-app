@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { TodoEditor } from '../TodoEditor/TodoEditor';
 import { useDispatch } from '../../../common/hooks/useDispatch';
 import { removeTodo, toggleIsDone } from '../../../common/store/actions';
+import SvgEdit from '../../../common/assets/svg/components/iconEdit';
+import SvgDelete from '../../../common/assets/svg/components/iconDelete';
 import styles from './TodoItem.module.scss';
 
 export const TodoItem = ({ id, task, done }) => {
@@ -19,19 +21,21 @@ export const TodoItem = ({ id, task, done }) => {
       <input type="checkbox" checked={done} onChange={isDoneToggler} />
 
       {!isEditing ? (
-        <p className={done ? styles['todo-done'] : 'todo-pending'}>{task}</p>
+        <button type="button" onClick={onEdit} className={styles['btn-task']}>
+          <p className={done ? styles['todo-done'] : 'todo-pending'}>{task}</p>
+        </button>
       ) : (
         <TodoEditor todoData={{ id, task }} setIsEditing={setIsEditing} />
       )}
 
-      <div className="todo-item-actions">
+      <div className={styles['todo-actions']}>
         {!isEditing && (
-          <button type="button" onClick={onEdit}>
-            Edit
+          <button className={styles['btn-edit']} type="button" onClick={onEdit}>
+            <SvgEdit width="1.6rem" heigh="1.6rem" />
           </button>
         )}
-        <button type="button" onClick={deleteHandler}>
-          Delete
+        <button className={styles['btn-delete']} type="button" onClick={deleteHandler}>
+          <SvgDelete width="1.6rem" heigh="1.6rem" />
         </button>
       </div>
     </li>
